@@ -7,4 +7,11 @@ a) git remote add nimi address
 git remote add github https://github.com/kasutajanimi/reponimi
 b)kontrolli git remote
 git remote -v
-
+pohikasutamine:
+a) pane faili jälgimisele: git add failinimi
+b) lisa muudatuse kirjeldus (lühike)
+git commit -m "kirjelduse lühike lause"
+voi
+git commit -a - sel juhul editoriga kirjuta lühikirjeldus
+c) git push remote_nimi versioonide_halduse_üksuse_nimi
+git push -uf github master

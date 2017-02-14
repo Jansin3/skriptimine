@@ -5,3 +5,8 @@
 # kasutame keskkonna muutuja nimega $USER
 # tervitame kasutaja
 echo "Tere, $USER!"
+# kuupäeva väärtuse loomine
+# defineermine vastava väärtusega muutuja
+kuupaev=`date +'%d. %B'`
+# väljastamine kuupäev koos seletusega
+echo "Täna on $kuupaev"

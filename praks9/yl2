@@ -1,0 +1,14 @@
+#!/bin/bash
+for i in {1..5}   # 5tärni
+do
+	echo -n "$i"  # rida algab numbriga
+	echo -n ". " # test aga lisab valet asja tglt ei lisab punkti
+	for i in {1..5}   #  5 rida alumist
+	do
+		echo -n "*"  #echob mida meil ridadele on vaja
+	done
+	echo
+done
+
+
+# skriptilõpp

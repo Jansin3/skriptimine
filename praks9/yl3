@@ -1,0 +1,20 @@
+#!/bin/bash
+rida=0
+tarnid=0
+echo "Sisesta ridade arv: "
+read rida
+echo "Sisesta tarnide arv reas: "
+read tarnid
+for (( i = 1; i <= $rida; i++ )) #in {1..$tarnid}   # 5tärni
+do
+	echo -n "$i"  # rida algab numbriga
+	echo -n ". " # test aga lisab valet asja tglt ei lisab punkti
+	for (( j = 1 ; j <= $tarnid; j++ ))  #i in {1..$rida}   #  5 rida alumist
+	do
+		echo -n "*"  #echob mida meil ridadele on vaja
+	done
+	echo
+done
+
+
+# skriptilõpp

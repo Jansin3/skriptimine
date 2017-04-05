@@ -5,12 +5,23 @@
 for((r=1; r<5; r++))
 do
   # ctrl kui r on 1
-  if [ $r -eq 1 ]; then
+  # ctl või (-o r on 4)
+  if [ $r -eq 1 -o $r -eq 4 ]; then
   # joonistame tärnid
    for((v=1; v<6; v++))
    do
     echo -n "* "
    done
+else
+  #tärn
+  echo -n "* "
+  # täpid
+for((v=2; v<5; v++))
+do
+echo -n "0 "
+done
+#tärn
+echo -n "* "
   fi
 #reavahetus
 echo

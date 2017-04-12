@@ -2,9 +2,16 @@
 #
 # ip jargi avuti kontrollimine
 #for((nr=1; nr=10; nr++))
-for ip in 172.23.13.{20..50}
+algus=0
+lopp=0
+echo -n "Sisesta algus: "
+read algus
+echo -n "Sisesta lopp: "
+read lopp
+for((nr=$algus; nr<=$lopp; nr++))
+#for ip in 172.23.13.{20..50}
 do
-  #ip=172.23.13.$nr
+  ip=172.23.13.$nr
 ping -c 1 $ip > /dev/null #valjund kustutatud
 # ctrl
 if [ $? -eq 0 ]; then

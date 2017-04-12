@@ -2,8 +2,15 @@
 #
 # ip jargi avuti kontrollimine
 #for((nr=1; nr=10; nr++))
-for nr in {20..50}
+for ip in 172.23.13.{20..50}
 do
-  ip=172.23.13.$nr
- echo $ip
+  #ip=172.23.13.$nr
+ping -c 1 $ip > /dev/null #valjund kustutatud
+# ctrl
+if [ $? -eq 0 ]; then
+	# kui $? on 0 - korras
+	echo "$ip - online"
+else
+   echo "$ip - offline"
+fi
 done

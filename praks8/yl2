@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# aja jargi tervitamine
+#
+# Juhendi lisamine
+#if [ $# -ne 1 ]; then
+#echo "Kasutusjuhend: "
+#echo "Sisestage tund"
+#echo "Näiteks: 23"
+#fi
+aeg=`date | cut -c12-13`
+#echo -e "Sisesta aja väärtus: \c"
+#read aeg
+# kontrollimine
+if [ $aeg -ge 6 -a $aeg -lt 12 ]; then
+	echoo="Tere hommikust!"
+elif [ $aeg -ge 12 -a $aeg -lt 18 ]; then
+	echoo="Tere päevast!"
+elif [ $aeg -ge 18 -a $aeg -lt 22 ]; then
+	echoo="Tere õhtust!"
+elif [ $aeg -ge 22 -a $aeg -lt 24 ] || [ $aeg -ge 0 -a $aeg -lt 6 ]; then
+	echoo="Head ööd!"
+else 
+	echoo="Vale sisend"
+fi
+kuupaev=`date +'%d. %B'`
+kalender=`cal`
+echo "$echoo $USER!"
+echo "Täna on $kuupaev"
+echo "Antud kuu kalender:"
+echo "------------------"
+echo "$kalender"
+echo "------------------"
+echo
+#echo -n `whoami`
+#echo "!"
+# skripti lõpp

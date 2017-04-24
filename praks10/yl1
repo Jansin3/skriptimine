@@ -1,0 +1,30 @@
+#!/bin/bash
+# failide loomine
+#
+echo -n "Sisesta vahemiku algus: "
+read algus
+echo -n "Sisesta vahemiku lopp: "
+read lopp
+#
+# loome failid
+for((nr=$algus; nr<=$lopp; nr++))
+do
+ failinimi="fail$nr"
+ if [ -f $failinimi ]; then
+ echo "$failinimi fail on juba olemas"
+ echo "kas soovid kustudada antud fail? y/n"
+ read vastus
+	 if [ "$vastus" = "y" ]; then
+ 	rm $failinimi
+ 	touch $failinimi
+ 	else #[ "$vastus" = "n" ]; then
+ 	echo "$failinimi on jaanud vana failina"
+	#echo
+	#else
+	#echo "Kirjutage palun y või n"
+	#echo
+  	fi
+ else
+touch $failinimi
+fi
+done
